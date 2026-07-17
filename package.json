@@ -1,0 +1,66 @@
+{
+  "name": "webp-crab",
+  "version": "1.0.0",
+  "description": "一个无依赖、稳定、美观、易用的 webp 生成器，可以解决你用其他工具生成的 webp 在各种平台下表现不一的问题。",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "node scripts/package.js",
+    "build:mac": "electron-builder --mac",
+    "build:win": "electron-builder --win",
+    "icons": "node scripts/generate-icons.js"
+  },
+  "author": "ShiLei",
+  "license": "BSD",
+  "devDependencies": {
+    "electron": "^17.4.11",
+    "electron-builder": "^22.14.13",
+    "png-to-ico": "^2.1.0"
+  },
+  "keywords": [
+    "webp"
+  ],
+  "bugs": {
+    "url": "https://github.com/nervouself/webp-crab/issues"
+  },
+  "homepage": "https://github.com/nervouself/webp-crab",
+  "build": {
+    "appId": "com.shilei.app",
+    "productName": "Crab WebP",
+    "asar": true,
+    "asarUnpack": [
+      "src/bin/**"
+    ],
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "index.js",
+      "src/**/*",
+      "package.json"
+    ],
+    "artifactName": "${productName}-${version}-${os}-${arch}.${ext}",
+    "mac": {
+      "icon": "build/icon.icns",
+      "target": [
+        "dmg"
+      ],
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "entitlements": "build/entitlements.mac.plist",
+      "entitlementsInherit": "build/entitlements.mac.plist"
+    },
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
