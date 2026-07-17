@@ -36,7 +36,7 @@
 
 ## 下载
 
-前往 [Releases](https://github.com/nervouelf/webp-crab/releases) 下载最新版本：
+前往 [Releases](https://github.com/XYRZX/webp-crab/releases) 下载最新版本：
 
 | 平台 | 格式 | 说明 |
 |------|------|------|

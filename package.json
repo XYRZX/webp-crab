@@ -18,12 +18,19 @@
     "png-to-ico": "^2.1.0"
   },
   "keywords": [
-    "webp"
+    "webp",
+    "webp-generator",
+    "electron",
+    "gif"
   ],
-  "bugs": {
-    "url": "https://github.com/nervouself/webp-crab/issues"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XYRZX/webp-crab.git"
   },
-  "homepage": "https://github.com/nervouself/webp-crab",
+  "bugs": {
+    "url": "https://github.com/XYRZX/webp-crab/issues"
+  },
+  "homepage": "https://github.com/XYRZX/webp-crab",
   "build": {
     "appId": "com.shilei.app",
     "productName": "Crab WebP",
